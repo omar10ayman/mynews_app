@@ -6,6 +6,7 @@ import '../bloc/cubit.dart';
 import '../bloc/states.dart';
 import '../shared/componats.dart';
 
+// ignore: camel_case_types
 class healthPade extends StatelessWidget {
   const healthPade({Key? key}) : super(key: key);
 

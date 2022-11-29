@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:today/bloc/states.dart';
 import 'package:today/dio/diohelper.dart';
 
+// ignore: camel_case_types
 class newsCubit extends Cubit<NewsStates> {
   newsCubit() : super(intialState());
   static newsCubit get(context) => BlocProvider.of(context);
@@ -18,7 +19,6 @@ class newsCubit extends Cubit<NewsStates> {
       bussenss = value?.data['articles'];
       emit(scussesgBussiessData());
     }).catchError((error) {
-      print(error.toString());
       emit(errorBussiessData(error));
     });
   }
@@ -35,7 +35,6 @@ class newsCubit extends Cubit<NewsStates> {
       sports = value?.data['articles'];
       emit(scussesgSportsData());
     }).catchError((error) {
-      print(error.toString());
       emit(errorSportsData(error));
     });
   }
@@ -115,7 +114,6 @@ class newsCubit extends Cubit<NewsStates> {
       search = value?.data['articles'];
       emit(scussesgsearchData());
     }).catchError((error) {
-      print(error.toString());
       emit(errorsearchData(error));
     });
   }

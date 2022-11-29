@@ -5,6 +5,7 @@ import 'package:today/bloc/states.dart';
 import 'package:today/screens/search.dart';
 import 'package:today/shared/componats.dart';
 
+// ignore: camel_case_types
 class news extends StatelessWidget {
   news({Key? key}) : super(key: key);
 
@@ -18,7 +19,7 @@ class news extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             leading: IconButton(
-              icon: Icon(Icons.dark_mode_rounded),
+              icon: const Icon(Icons.dark_mode_rounded),
               onPressed: () {
                 cubit.darkMode();
               },

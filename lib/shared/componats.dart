@@ -61,6 +61,7 @@ Widget dataMainApp(dataModel data, context) => Padding(
         ),
       ),
     );
+// ignore: avoid_types_as_parameter_names, non_constant_identifier_names
 void navigto(context, Widget) =>
     Navigator.push(context, MaterialPageRoute(builder: (context) => Widget));
 Widget defualtform({

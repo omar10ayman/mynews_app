@@ -9,6 +9,7 @@ import 'package:today/bloc/states.dart';
 
 import '../shared/componats.dart';
 
+// ignore: camel_case_types
 class sciencePade extends StatelessWidget {
   const sciencePade({Key? key}) : super(key: key);
 
