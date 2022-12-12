@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:today/bloc/states.dart';
+import 'package:today/chache/chacheHelper.dart';
 import 'package:today/dio/diohelper.dart';
 
 // ignore: camel_case_types
@@ -119,8 +120,14 @@ class newsCubit extends Cubit<NewsStates> {
   }
 
   bool isDark = false;
-  darkMode() {
-    isDark = !isDark;
-    emit(darkModeState());
+  darkMode({bool? fromShare}) {
+    if (fromShare != null) {
+      isDark = fromShare;
+    } else {
+      isDark = !isDark;
+      chacheHelper.setData(key: 'isDark', value: isDark).then((value) {
+        emit(darkModeState());
+      });
+    }
   }
 }
